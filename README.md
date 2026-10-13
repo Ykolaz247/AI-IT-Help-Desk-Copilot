@@ -57,19 +57,19 @@ For the first version of the Copilot, the project uses:
 
 ### Queue Classification
 
-Input:
+**Input**
 
 `Ticket subject + ticket body`
 
-Processing:
+**Processing**
 
 `TF-IDF text vectorization`
 
-Model:
+**Model**
 
 `Logistic Regression`
 
-Evaluation:
+**Evaluation**
 
 - Accuracy: approximately 54.6%
 - Macro F1: approximately 56.4%
@@ -91,11 +91,11 @@ Priority classes:
 - Medium
 - Low
 
-Model:
+**Model**
 
 `TF-IDF + Logistic Regression`
 
-Evaluation:
+**Evaluation**
 
 - Accuracy: approximately 59.5%
 - Macro F1: approximately 56.1%
@@ -169,8 +169,10 @@ Queue Confidence        Priority Confidence
                    |
                    v
            Streamlit Interface
+```
 
-Technology Stack
+## Technology Stack
+
 - Python
 - Pandas
 - NumPy
@@ -184,7 +186,9 @@ Technology Stack
 - Joblib
 - Streamlit
 - Anaconda
-Current Features
+
+## Current Features
+
 - Automatic support-queue recommendation
 - Ticket-priority prediction
 - Prediction confidence scores
@@ -194,38 +198,69 @@ Current Features
 - Historical resolution recommendations
 - Similarity safety threshold
 - Interactive Streamlit web interface
-Project Demonstration
-Streamlit Copilot Interface
+
+## Project Demonstration
+
+### Streamlit Copilot Interface
+
 The application provides a simple interface where support personnel can enter a ticket and receive routing, priority, confidence, and historical-resolution recommendations.
 
-Confidence-Based Human Review
+![AI IT Help Desk Copilot Interface](screenshots/portfolio/09_Streamlit_Copilot_Interface.png)
+
+### Confidence-Based Human Review
+
 When prediction confidence falls below the configured thresholds, the Copilot does not treat the recommendation as an automatic decision.
 
-Top Routing Suggestions
+![Human Review Decision](screenshots/portfolio/01_Copilot_Human_Review_Decision.png)
+
+### Top Routing Suggestions
+
 The system presents alternative queues and their confidence scores to support technician judgment.
 
-Historical Resolution Retrieval
+![Top Routing Suggestions](screenshots/portfolio/02_Copilot_Top_Routing_Suggestions.png)
+
+### Historical Resolution Retrieval
+
 Relevant previously resolved tickets can be retrieved as reference cases. Low-similarity results are clearly marked for additional verification.
 
-Model Development Evidence
-Queue Model Comparison
+![Historical Resolution Safety](screenshots/portfolio/08_Historical_Resolution_Safety.png)
+
+## Model Development Evidence
+
+### Queue Model Comparison
+
 Logistic Regression, Linear SVM, and Complement Naive Bayes were compared before selecting the routing model.
 
-Priority Model Comparison
+![Queue Model Comparison](screenshots/portfolio/03_Queue_Model_Comparison.png)
+
+### Priority Model Comparison
+
 The same model-selection process was applied to ticket-priority prediction.
 
-Data Preparation
+![Priority Model Comparison](screenshots/portfolio/04_Priority_Model_Comparison.png)
+
+### Data Preparation
+
 The English-language subset was checked for missing values and duplicates before modelling.
 
-Queue Model Training
+![Data Preparation and Cleaning](screenshots/portfolio/05_Data_Preparation_and_Cleaning.png)
 
-Priority Model Training
+### Queue Model Training
 
-Example Workflow
+![Queue Model Training Results](screenshots/portfolio/06_Queue_Model_Training_Results.png)
+
+### Priority Model Training
+
+![Priority Model Training Results](screenshots/portfolio/07_Priority_Model_Training_Results.png)
+
+## Example Workflow
+
 A user submits:
-I cannot connect my laptop to the company Wi-Fi and I need internet access for work.
+
+> I cannot connect my laptop to the company Wi-Fi and I need internet access for work.
 
 The Copilot:
+
 1. predicts the support queue,
 2. estimates its confidence,
 3. predicts ticket priority,
@@ -233,9 +268,13 @@ The Copilot:
 5. searches historical resolved tickets,
 6. retrieves a similar Wi-Fi case,
 7. presents the historical resolution as a reference.
-Limitations
+
+## Limitations
+
 This is a portfolio prototype and not a production help-desk platform.
+
 Current limitations include:
+
 - moderate classification accuracy,
 - class imbalance,
 - relatively small English training dataset,
@@ -243,9 +282,13 @@ Current limitations include:
 - similarity threshold requires broader validation,
 - historical resolutions may contain customer-specific or company-specific wording,
 - retrieved solutions require human verification.
+
 These limitations are intentionally exposed in the application rather than hidden.
-Future Improvements
+
+## Future Improvements
+
 Future versions could include:
+
 - multilingual ticket classification,
 - transformer-based NLP models,
 - improved class balancing,
@@ -258,7 +301,10 @@ Future versions could include:
 - AWS deployment,
 - authentication and user management,
 - technician feedback for continuous model improvement.
-Project Structure
+
+## Project Structure
+
+```text
 AI_IT_Helpdesk_Copilot/
 │
 ├── app/
@@ -295,7 +341,10 @@ AI_IT_Helpdesk_Copilot/
 ├── notebooks/
 ├── requirements.txt
 └── README.md
+```
 
-Author
-AZEEZ OLAYINKA MONSURU
+## Author
+
+**AZEEZ OLAYINKA MONSURU**
+
 Computer Science | IT Support | Machine Learning | AWS | AI Solutions

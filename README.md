@@ -2,6 +2,12 @@
 
 An intelligent IT support ticket triage and decision-support system built with Python, Scikit-learn, TF-IDF, machine learning, historical case retrieval, and Streamlit.
 
+## Live Demo
+
+🚀 **[Launch the AI IT Support Copilot](https://ai-it-support-copilot.streamlit.app)**
+
+The deployed application allows users to submit an IT support request and receive queue routing, priority prediction, confidence scores, human-review recommendations, and historical resolution suggestions.
+
 ## Project Overview
 
 The AI IT Help Desk Copilot analyzes incoming support tickets and assists IT support teams with four tasks:

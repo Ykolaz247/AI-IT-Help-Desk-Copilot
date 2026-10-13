@@ -269,6 +269,56 @@ The Copilot:
 6. retrieves a similar Wi-Fi case,
 7. presents the historical resolution as a reference.
 
+## How to Run Locally
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Ykolaz247/AI-IT-Help-Desk-Copilot.git
+cd AI-IT-Help-Desk-Copilot
+```
+
+### 2. Create a Python environment
+
+Using Anaconda:
+
+```bash
+conda create -n it-helpdesk-ai python=3.11 -y
+conda activate it-helpdesk-ai
+```
+
+### 3. Install the required packages
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Launch the Streamlit application
+
+```bash
+streamlit run app/streamlit_app.py
+```
+
+### 5. Open the application
+
+Streamlit should automatically open the application in your browser.
+
+If it does not, visit:
+
+```text
+http://localhost:8501
+```
+
+Enter an IT support request into the ticket box and select **Analyze Ticket** to receive:
+
+- recommended support queue,
+- queue confidence,
+- predicted priority,
+- priority confidence,
+- human-review status,
+- top routing suggestions,
+- and historical resolution references.
+
 ## Limitations
 
 This is a portfolio prototype and not a production help-desk platform.
